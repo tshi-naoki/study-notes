@@ -70,7 +70,7 @@ public class Question : ObservableObject, ICloneable
         var questionSelections=new List<QuestionSelection>();
         
         foreach(var qs in question.QuestionSelections){
-            questionSelections.Add(qs.Clone as QuestionSelection);
+            questionSelections.Add(qs.Clone() as QuestionSelection);
         }
 
         question.QuestionSelections = questionSelections;
